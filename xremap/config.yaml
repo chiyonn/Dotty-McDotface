@@ -1,0 +1,5 @@
+modmap:
+- name: Global
+  remap:
+    CapsLock: Control_L
+    KEY_RIGHTSHIFT: KEY_BACKSPACE
