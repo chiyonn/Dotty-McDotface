@@ -1,0 +1,15 @@
+
+EDITOR=nvim
+
+alias editz="$EDITOR $HOME/.zshrc && source $HOME/.zshrc"
+alias aliases="$EDITOR $HOME/.aliases && source $HOME/.aliases"
+
+# Basic ls commands
+alias ls='ls --color=auto'         # Colorized ls output
+alias ll='ls -lh'                  # Long listing with human-readable sizes
+alias la='ls -A'                   # List all entries except . and ..
+alias l='ls -CF'                   # Clustered view
+
+alias cp='cp -i'                   # Confirm before overwrite
+alias mv='mv -i'                   # Confirm before overwrite
+alias rm='rm -i'                   # Confirm before delete

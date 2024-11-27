@@ -1,0 +1,40 @@
+# General
+bindkey -e
+zstyle :compinstall filename '/home/chiyonn/.zshrc'
+autoload -Uz compinit
+compinit
+
+
+### Aliases
+ALIASES_FILE=$HOME/.aliases
+if [ -f "$ALIASES_FILE" ]; then
+    source "$ALIASES_FILE"
+fi
+
+
+### History
+HISTFILE=~/.histfile
+HISTSIZE=5000
+SAVEHIST=10000
+
+
+### Git
+# Prompt
+GIT_PROMPT_SCRIPTFILE=$HOME/.zsh/git-prompt.sh
+if [ -f "$GIT_PROMPT_SCRIPTFILE" ]; then
+    source "$GIT_PROMPT_SCRIPTFILE"
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM=auto
+
+setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
+\$ '
+
+# Completion
+fpath=(~/.zsh $fpath)
+
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+
