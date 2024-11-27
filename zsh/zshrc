@@ -41,3 +41,8 @@ fpath=(~/.zsh $fpath)
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 
+# Sync Check
+DOTS_REPO_DIRPATH=$HOME/Projects/Dotty-McDotface
+if [ -d "$DOTS_REPO_DIRPATH" ]; then
+    source "$DOTS_REPO_DIRPATH/git_sync_check.sh"
+fi
