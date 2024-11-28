@@ -14,3 +14,13 @@ alias l='ls -CF'                   # Clustered view
 alias cp='cp -i'                   # Confirm before overwrite
 alias mv='mv -i'                   # Confirm before overwrite
 alias rm='rm -i'                   # Confirm before delete
+
+alias grep='grep --color=auto'
+alias tree='tree -C -I "node_modules|__pycache__"'
+
+alias nv="nvim"
+alias systus="systemctl status"
+alias swayconfig="cd $HOME/.config/sway && $EDITOR config && swaymsg reload"
+
+# for Python
+alias activate="source ./.venv/bin/activate"
