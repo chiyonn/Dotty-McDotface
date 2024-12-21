@@ -24,7 +24,7 @@
         "keyboard-state",
         "battery",
         "battery#bat2",
-        "clock",
+        "clock"
     ],
     // Modules configuration
     // "sway/workspaces": {
