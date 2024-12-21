@@ -37,8 +37,7 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 setopt PROMPT_SUBST
 
-PS1='%F{blue}%n@%m%f:%F{cyan}%~%f %F{yellow}$(__git_ps1 "(%s)")%f
-%F{green}$%f '
+PS1='%F{blue}%n@%m%f:%F{cyan}%~%f %F{yellow}$(__git_ps1 "(%s)")%f%F{green}$%f '
 RPS1='%F{white}[%*]%f'
 
 # Completion
