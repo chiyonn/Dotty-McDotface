@@ -30,44 +30,12 @@
 }
 
 window#waybar {
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   font-size: 18px;
-}
-
-#window {
-  background: black;
-}
-
-#workspaces {
-  background: black;
-}
-
-#network {
-  background: black;
-}
-
-#pulseaudio {
-  background: black;
-}
-
-#temperature {
-  background: black;
 }
 #temperature.critical {
   animation: blink-critical 1s steps(2, start) infinite;
   color: rgba(255, 80, 0, 1);
-}
-
-#cpu {
-  background: black;
-}
-
-#memory {
-  background: black;
-}
-
-#clock {
-  background: black;
 }
 
 @keyframes blink-critical {
