@@ -33,6 +33,11 @@ default_border pixel 2
 gaps inner 2
 gaps outer 2
 
+client.focused          #CC8C00 #CC4000 #282828 #CC8C00
+client.focused_inactive #444444 #282828 #282828 #444444
+client.unfocused        #282828 #282828 #282828 #282828
+client.urgent           #CC0000 #282828 #282828 #CC0000
+
 # keybinds
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
