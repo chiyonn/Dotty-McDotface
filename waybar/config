@@ -1,8 +1,8 @@
 {
 	"layer": "top",
 	"position": "bottom",
-	"modules-left": ["sway/workspaces", "mpd", "sway/mode"],
-	"modules-center": ["sway/window"],
+	"modules-left": ["sway/window"],
+	"modules-center": ["sway/workspaces", "mpd", "sway/mode"],
 	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "disk", "gpu", "clock"],
 	"pulseaudio": {
 		"tooltip": false,
