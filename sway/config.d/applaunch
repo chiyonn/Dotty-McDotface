@@ -3,7 +3,7 @@
 # application valiables
 set $term foot
 set $filer thunar
-set $browser firefox
+set $browser /opt/google/chrome/chrome
 set $menu wofi -G --show drun | xargs swaymsg exec --
 
 # launch keybinds
