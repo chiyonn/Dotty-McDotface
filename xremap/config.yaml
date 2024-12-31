@@ -3,3 +3,5 @@ modmap:
   remap:
     CapsLock: Control_L
     KEY_RIGHTSHIFT: KEY_BACKSPACE
+    BackSpace: backslash
+    backslash: BackSpace
