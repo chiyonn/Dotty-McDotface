@@ -27,6 +27,7 @@ alias activate="source ./.venv/bin/activate"
 
 # for Git
 alias gst="git status"
+alias push="git push"
 
 # for Docker
 alias compose="docker compose"
