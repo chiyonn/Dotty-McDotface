@@ -1,8 +1,7 @@
 {
 	"layer": "top",
 	"position": "bottom",
-	"modules-left": ["sway/window"],
-	"modules-center": ["sway/workspaces", "mpd", "sway/mode"],
+	"modules-left": ["sway/workspaces", "mpd", "sway/mode"],
 	"modules-right": [
         "network",
         "pulseaudio",
@@ -15,35 +14,42 @@
         "battery",
         "clock"
     ],
-	"pulseaudio": {
-		"tooltip": false,
-		"scroll-step": 5,
-		"format": "{icon} {volume}%",
-		"format-icons": {
-			"default": ["", "", ""]
-		}
-	},
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon}{volume}% {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
     "backlight": {
-        // "device": "acpi_video1",
-        "format": "󰱊 {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{percent}%",
     },
     "battery": {
         "states": {
-            "warning": 30,
-            "critical": 15
+            "critical": 25
         },
-        "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{icon}{capacity}%",
+        "format-full": "{icon}{capacity}%",
+        "format-charging": "{capacity}%",
+        "format-plugged": "{capacity}%",
+        "format-alt": "{time}{icon}",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "interval": 1,
         "format": "{ifname}",
-        "format-wifi": "{icon}▲ {bandwidthDownBytes} ▼ {bandwidthUpBytes} ",
+        "format-wifi": "{icon}  {bandwidthDownBytes}  {bandwidthUpBytes} ",
         "format-ethernet": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
         "format-disconnected": "󰌙",
         "tooltip-format": "{ipaddr}",
@@ -56,13 +62,13 @@
     },
 	"temperature": {
 		"tooltip": false,
-		"format": "\uef2b  {temperatureC}",
+		"format": "{temperatureC}°C",
         "critical-threshold": 70,
         "interval": 1
 	},
 	"cpu": {
 		"tooltip": false,
-		"format": "\uf4bc  {:0.1f}%",
+		"format": "{:0.1f}%",
         "interval": 1
 	},
 	"memory": {
@@ -76,13 +82,6 @@
 		"format-icons": {
 			"default": ""
 		}
-	},
-	"gpu": {
-		"tooltip": false,
-		"interval": 10,
-		"exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{print \" \"$1\"%\"}'",
-		"return-type": "raw",
-		"format": "{}"
 	},
     "clock": {
         "tooltip": false,
