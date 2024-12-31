@@ -3,7 +3,7 @@
 	"position": "bottom",
 	"modules-left": ["sway/window"],
 	"modules-center": ["sway/workspaces", "mpd", "sway/mode"],
-	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "disk", "gpu", "clock"],
+	"modules-right": ["network", "pulseaudio", "backlight", "temperature", "cpu", "memory", "disk", "gpu", "clock"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
@@ -12,6 +12,11 @@
 			"default": ["", "", ""]
 		}
 	},
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "󰱊 {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
     "network": {
         "interval": 1,
         "format": "{ifname}",
