@@ -2,7 +2,7 @@
 EDITOR=nvim
 
 alias obim="$EDITOR $HOME/Obsidian"
-alias editz="$EDITOR $HOME/.zshrc && source $HOME/.zshrc"
+alias zedit="$EDITOR $HOME/.zshrc && source $HOME/.zshrc"
 alias aliases="$EDITOR $HOME/.aliases && source $HOME/.aliases"
 
 # Basic ls commands
