@@ -99,6 +99,8 @@ bar {
     swaybar_command waybar
 }
 
+for_window [app_id="blueman-manager"] floating enable, border pixel 2
+for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, border pixel 2
 
 include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*
