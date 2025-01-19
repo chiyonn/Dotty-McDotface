@@ -21,6 +21,7 @@ alias tree='tree -C -I "node_modules|__pycache__"'
 alias nv="nvim"
 alias systus="systemctl status"
 alias swayconfig="cd $HOME/.config/sway && $EDITOR config && swaymsg reload"
+alias goto="cd /mnt/dev-docker && cd"
 
 # for Python
 alias activate="source ./.venv/bin/activate"
