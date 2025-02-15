@@ -1,8 +1,20 @@
 * {
   font-family: "Source Code Pro", "Font Awesome 6 Free Solid",
     "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular";
-  font-size: 20px;
+  font-size: 16px;
 }
+
+/*
+            Colors      Bright Colors
+Black		#0F2130		#B0B3B9
+Red		    #D22613		#F96795
+Green		#7CDE53		#A0F2A0
+Yellow	    #EBE645		#F4EF82
+Blue		#2C9ADE		#A3FEFE
+Magenta	    #FFA705		#F1B356 (magenta == orange now)
+Cyan		#8A95A7		#B0C3DA
+White		#F8F8F8		#FFFFFF
+*/
 
 #window,
 #workspaces,
@@ -15,20 +27,21 @@
 #disk,
 #battery,
 #clock {
+  margin-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
+  color: #f8f8f8;
+  border-radius: 4px;
   transition: none;
-  color: rgba(0, 255, 255, 0.7);
 }
 
 #workspaces button {
-  color: rgba(0, 255, 255, 0.7);
-  transition: none;
-  background: transparent;
+  color: #f8f8f8;
+  border-radius: 4px;
 }
 
 #workspaces button.active {
-  color: rgba(0, 255, 255, 1);
+  color: #ffffff;
 }
 
 #workspaces button:hover {
@@ -36,12 +49,13 @@
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0);
 }
+
 #battery.critical,
 #temperature.critical {
   animation: blink-critical 1s steps(2, start) infinite;
-  color: rgba(0, 255, 255, 1);
+  background: #d22613;
 }
 
 @keyframes blink-critical {
