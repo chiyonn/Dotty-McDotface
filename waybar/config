@@ -10,7 +10,6 @@
         "cpu",
         "memory",
         "disk",
-        "gpu",
         "battery",
         "clock"
     ],
